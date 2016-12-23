@@ -1,0 +1,37 @@
+﻿<%--
+Default skin template. The following skins are provided as examples only.
+
+1. Named control skin. The SkinId should be uniquely defined because
+   duplicate SkinId's per control type are not allowed in the same theme.
+
+<asp:GridView runat="server" SkinId="gridviewSkin" BackColor="White" >
+   <AlternatingRowStyle BackColor="Blue" />
+</asp:GridView>
+
+2. Default skin. The SkinId is not defined. Only one default 
+   control skin per control type is allowed in the same theme.
+
+<asp:Image runat="server" ImageUrl="~/images/image1.jpg" />
+--%>
+
+<asp:DataGrid runat="server" 
+              SkinID="GridSkin" 
+              AutoGenerateColumns="False" 
+              BackColor="White" 
+              BorderColor="#CCCCCC" 
+              BorderStyle="None" 
+              BorderWidth="1px" 
+              CellPadding="1" 
+              ForeColor="Black" 
+              GridLines="Horizontal" 
+              CssClass="grid"
+              AllowPaging="true">
+
+    <AlternatingItemStyle BackColor="#E9E9E9" />    
+    <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
+    <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
+    <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
+    <SelectedItemStyle BackColor="#CC3333" Font-Bold="True" ForeColor="White" />
+    <FooterStyle BackColor="#EBEBEB" HorizontalAlign="Left" />
+    <PagerStyle Font-Bold="True" Font-Size="11pt" ForeColor="#333333" HorizontalAlign="Left" Mode="NumericPages" PageButtonCount="10000" VerticalAlign="Middle" CssClass="footer" />
+</asp:DataGrid>

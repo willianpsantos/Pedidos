@@ -1,0 +1,22 @@
+﻿<%@ Master Language="C#" MasterPageFile="Main.Master" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="Pedidos.Site" %>
+<%@ Register Src="~/UserControls/MainMenu.ascx" TagName="MainMenu" TagPrefix="usc" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+    <%: Styles.Render("~/Content/css/menu.css") %>
+</asp:Content>
+
+<asp:Content ID="Content2" ContentPlaceHolderID="cphMain" runat="server">
+    <usc:MainMenu ID="mainMenu1" runat="server"></usc:MainMenu>
+
+    <section class="form-main right">
+        <asp:ContentPlaceHolder ID="cphSite" runat="server">
+        </asp:ContentPlaceHolder>
+    </section>
+</asp:Content>
+
+<asp:Content ID="ContentFooter" runat="server" ContentPlaceHolderID="cphFooter">
+    <asp:ContentPlaceHolder ID="cphSiteFooter" runat="server">
+    </asp:ContentPlaceHolder>
+</asp:Content>
+
+

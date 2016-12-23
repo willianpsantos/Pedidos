@@ -1,0 +1,31 @@
+﻿/*
+  Para configurar o menu principal, basta que o objeto JSON siga a seguinte estrutura
+
+  items : [
+    {
+      name: "Nome único para o menu. Não pode repetir",
+      title: "Titulo do menu que aparecerá para o usuário",
+      link: "pagina que o menu redirecionará quando for clicado"
+    }
+  ]
+
+*/
+
+{
+  "menuJsFile": "/Scripts/menu.js",
+  "menuCssClass": "menu",
+  "menuItemCssClass": "menu-item",
+
+  "items": [
+    {
+      "name": "cliente",
+      "title": "Clientes",
+      "link": "/Cadastros/Clientes/Listagem.aspx"
+    },
+    {
+      "name": "pedido",
+      "title": "Pedidos",
+      "link": "/Cadastros/Pedidos/Listagem.aspx"
+    }
+  ]
+}

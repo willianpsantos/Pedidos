@@ -1,0 +1,43 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.Master.cs" Inherits="Pedidos.Main" %>
+<%@ Register Src="~/UserControls/PageHeader.ascx" TagName="PageHeader" TagPrefix="usc" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Pedidos</title>
+    <asp:PlaceHolder runat="server">
+        <%: Styles.Render("~/bundles/fontaweasome")  %>
+        <%: Styles.Render("~/bundles/css")  %>
+        <%: Scripts.Render("~/bundles/jquery")  %>
+        <%: Scripts.Render("~/bundles/library")  %>
+    </asp:PlaceHolder>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>        
+    <form id="frmMain" runat="server" style="width:100%;height:100%;padding:0; margin:0;">
+        <section id="main" class="tema-cinza-claro">            
+            <usc:PageHeader runat="server" Text="WEB-ASK" />
+
+            <section id="sectionContent" runat="server" class="content">            
+                <asp:ContentPlaceHolder ID="cphMain" runat="server">        
+                </asp:ContentPlaceHolder>
+            </section>
+
+            <footer id="mainFooter" runat="server">
+                <img src="<%= ResolveUrl("~/Content/Images/icon.png") %>" class="logo-efikase" />                      
+                <span class="desenvolvido-por">Desenvolvido por <br /> Cuiabá Festas. </span>                        
+            
+                <asp:ContentPlaceHolder ID="cphFooter" runat="server">
+                </asp:ContentPlaceHolder>
+            </footer>
+        </section>   
+    
+        <asp:PlaceHolder runat="server">
+            <%: Scripts.Render("~/bundles/default") %>
+        </asp:PlaceHolder>
+    </form>
+</body>
+</html>

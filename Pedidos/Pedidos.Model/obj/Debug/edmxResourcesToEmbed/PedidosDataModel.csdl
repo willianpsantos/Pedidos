@@ -1,0 +1,343 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CLIENTES">
+    <Key>
+      <PropertyRef Name="CLICODIGO" />
+    </Key>
+    <Property Name="CLICODIGO" Type="Int32" Nullable="false" />
+    <Property Name="CLIRAZAOSOCIAL" Type="String" MaxLength="80" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CLICNPJ" Type="String" MaxLength="19" FixedLength="false" Unicode="true" />
+    <Property Name="CLICPF" Type="String" MaxLength="14" FixedLength="false" Unicode="true" />
+    <Property Name="CLITELFONE" Type="String" MaxLength="14" FixedLength="false" Unicode="true" />
+    <Property Name="CLICELULAR" Type="String" MaxLength="14" FixedLength="false" Unicode="true" />
+    <Property Name="CLITELEFONECOMERCIAL" Type="String" MaxLength="14" FixedLength="false" Unicode="true" />
+    <Property Name="CLIENDERECO" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CLIPONTOREFERENCIA" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CLIBAIRRO" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="CLICIDADEUF" Type="String" MaxLength="35" FixedLength="false" Unicode="true" />
+    <Property Name="CLICONTATO" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="CLIEMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CLIDATACADASTRO" Type="DateTime" />
+    <Property Name="CLICLASSIFICACAO" Type="String" MaxLength="1" FixedLength="true" Unicode="true" />
+    <Property Name="CLIOBS" Type="Binary" />
+    <Property Name="CLICEP" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="CLIRGIE" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CLIINSCRESTADUAL" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="CLIINSCRMUNICIPAL" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="ULTIMOACESSO" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ULTIMOACESSODATA" Type="DateTime" />
+    <Property Name="EMITIDOPOR" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="EMITIDOPORDATA" Type="DateTime" />
+    <NavigationProperty Name="IMGENDERECO" Relationship="Model.FK_IMGENDERECO_1" FromRole="CLIENTES" ToRole="IMGENDERECO" />
+  </EntityType>
+  <EntityType Name="PEDIDOS">
+    <Key>
+      <PropertyRef Name="PEDCODIGO" />
+    </Key>
+    <Property Name="PEDCODIGO" Type="Int32" Nullable="false" />
+    <Property Name="ORCCODIGO" Type="Int32" />
+    <Property Name="PEDDATAEMISSAO" Type="DateTime" />
+    <Property Name="PEDDATALOCACAO" Type="DateTime" />
+    <Property Name="PEDDATASAIDA" Type="DateTime" />
+    <Property Name="PEDDATADEVOLUCAO" Type="DateTime" />
+    <Property Name="CLICODIGO" Type="Int32" Nullable="false" />
+    <Property Name="FORCODIGO" Type="Int32" />
+    <Property Name="PEDOBS" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="PEDDIARIA" Type="Decimal" Precision="4" Scale="1" />
+    <Property Name="PEDOBS2" Type="Binary" />
+    <Property Name="PEDTIPOENTREGA" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="PEDATENDENTE" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="PEDVALORPAGO" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="PEDDESCONTO" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="PEDSTATUS" Type="Int32" />
+    <Property Name="PEDSTATUSPGTO" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="DATAIMPRESSAO" Type="DateTime" />
+    <Property Name="ULTIMOACESSO" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ULTIMOACESSODATA" Type="DateTime" />
+    <Property Name="EMITIDOPOR" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="EMITIDOPORDATA" Type="DateTime" />
+    <Property Name="ULTIMOIMPRESSAO" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="PEDDESCONTOP" Type="Decimal" Precision="15" Scale="2" />
+  </EntityType>
+  <EntityType Name="USUARIO">
+    <Key>
+      <PropertyRef Name="CODG" />
+    </Key>
+    <Property Name="CODG" Type="Int32" Nullable="false" />
+    <Property Name="LOGIN" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SENHA" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="PERFIL" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="PedidosDataContext" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CLIENTES" EntityType="Self.CLIENTES" />
+    <EntitySet Name="PEDIDOS" EntityType="Self.PEDIDOS" />
+    <EntitySet Name="USUARIO" EntityType="Self.USUARIO" />
+    <EntitySet Name="ITENSPEDIDOS" EntityType="Model.ITENSPEDIDOS" />
+    <EntitySet Name="CHEQUES" EntityType="Model.CHEQUES" />
+    <EntitySet Name="CONFSISTEMA" EntityType="Model.CONFSISTEMA" />
+    <EntitySet Name="FORMAPAGAMENTO" EntityType="Model.FORMAPAGAMENTO" />
+    <EntitySet Name="FORNECEDOR" EntityType="Model.FORNECEDOR" />
+    <EntitySet Name="FUNCIONARIOS" EntityType="Model.FUNCIONARIOS" />
+    <EntitySet Name="GRUPOPRODUTOS" EntityType="Model.GRUPOPRODUTOS" />
+    <EntitySet Name="IMGENDERECO" EntityType="Model.IMGENDERECO" />
+    <EntitySet Name="ITENSORCAMENTOS" EntityType="Model.ITENSORCAMENTOS" />
+    <EntitySet Name="LOGNF" EntityType="Model.LOGNF" />
+    <EntitySet Name="LOGPEDIDOS" EntityType="Model.LOGPEDIDOS" />
+    <EntitySet Name="NF" EntityType="Model.NF" />
+    <EntitySet Name="ORCAMENTOS" EntityType="Model.ORCAMENTOS" />
+    <EntitySet Name="PRODUTOS" EntityType="Model.PRODUTOS" />
+    <EntitySet Name="SUBGRUPOPRODUTOS" EntityType="Model.SUBGRUPOPRODUTOS" />
+    <AssociationSet Name="FK_IMGENDERECO_1" Association="Model.FK_IMGENDERECO_1">
+      <End Role="CLIENTES" EntitySet="CLIENTES" />
+      <End Role="IMGENDERECO" EntitySet="IMGENDERECO" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="ITENSPEDIDOS">
+    <Key>
+      <PropertyRef Name="IPCODIGO" />
+    </Key>
+    <Property Name="IPCODIGO" Type="Int32" Nullable="false" />
+    <Property Name="PEDCODIGO" Type="Int32" />
+    <Property Name="PROCODIGO" Type="Int32" />
+    <Property Name="IPQUANTIDADE" Type="Int32" />
+    <Property Name="IPPRECOUNITARIO" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="IPTOTAL" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="IPPRECOREPOSICAO" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="IPTOTALREPOSICAO" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="IPLOCADO" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="IPDATA" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="CHEQUES">
+    <Key>
+      <PropertyRef Name="CHECODIGO" />
+    </Key>
+    <Property Name="CHECODIGO" Type="Int32" Nullable="false" />
+    <Property Name="PEDCODIGO" Type="Int32" />
+    <Property Name="NOMECLIENTE" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="NOMEDOCHEQUE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CHEVALOR" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="CHEDATADEPOSITO" Type="DateTime" />
+    <Property Name="CHESITUACAO" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="CHETELEFONE" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CHECELULAR" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CHEOBS" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="CHEDATA" Type="DateTime" />
+    <Property Name="CPFDOCHEQUE" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="CHEBANCO" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="CHENUMERO" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="CHECONTACORRENTE" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="CHEAGENCIA" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="ULTIMOACESSO" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ULTIMOACESSODATA" Type="DateTime" />
+    <Property Name="CHECNPJ" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="CONFSISTEMA">
+    <Key>
+      <PropertyRef Name="CODG" />
+    </Key>
+    <Property Name="CODG" Type="Int32" Nullable="false" />
+    <Property Name="URLIMPRESSORA" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="URLORC" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="URLPEDIDO" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="SENHAEXCLUSAO" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="SENHAALTERAR" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="DATAEXPIRACAO" Type="DateTime" />
+    <Property Name="STATUSBLOQUEIO" Type="Int32" />
+    <Property Name="URLPESQUISA" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="URLCPF" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="URLCNPJ" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="EUSUARIO" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="ESENHA" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="EAUTENTICAREQUERIDA" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="EUTILIZASSL" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="EENDERECOSMTP" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="EPORTASMTP" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="EREMETENTE" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="URLNOTA" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="FORMAPAGAMENTO">
+    <Key>
+      <PropertyRef Name="FORCODIGO" />
+    </Key>
+    <Property Name="FORCODIGO" Type="Int32" Nullable="false" />
+    <Property Name="FORDESCRICAO" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="FORNECEDOR">
+    <Key>
+      <PropertyRef Name="FORCODG" />
+    </Key>
+    <Property Name="FORCODG" Type="Int32" Nullable="false" />
+    <Property Name="FORNOME" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="FORCNPJ" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="FORENDERECO" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="FORBAIRRO" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="FORCIDADE" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="FORRAMO" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="FORCONTATO" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="FOROBS" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="FORGRUPOPRODUTO" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="FORTELEFONE" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="FORCELULAR" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="FORFAX" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="FOREMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FORCEP" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="FUNCIONARIOS">
+    <Key>
+      <PropertyRef Name="CODG" />
+    </Key>
+    <Property Name="CODG" Type="Int32" Nullable="false" />
+    <Property Name="FUNCIONARIO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CPF" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="RG" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="TELEFONE" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="CELULAR" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="ENDERECO" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PONTOREF" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CEP" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="EMAIL" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DATACAD" Type="DateTime" />
+    <Property Name="BAIRRO" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="CIDADE" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="SALARIO" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="INSS" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="VALETRANSP" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="VALEREFEICAO" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="VALORLIQUIDO" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="OBS" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="GRUPOPRODUTOS">
+    <Key>
+      <PropertyRef Name="GRUCODIGO" />
+    </Key>
+    <Property Name="GRUCODIGO" Type="Int32" Nullable="false" />
+    <Property Name="GRUDESCRICAO" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="IMGENDERECO">
+    <Key>
+      <PropertyRef Name="CODG" />
+    </Key>
+    <Property Name="CODG" Type="Int32" Nullable="false" />
+    <Property Name="CLICODIGO" Type="Int32" />
+    <Property Name="IMAGEM" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="DATACRIACAO" Type="DateTime" />
+    <Property Name="DATAALTERACAO" Type="DateTime" />
+    <Property Name="USUARIOALTERACAO" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="USUARIOCRIACAO" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="CLIENTES" Relationship="Model.FK_IMGENDERECO_1" FromRole="IMGENDERECO" ToRole="CLIENTES" />
+  </EntityType>
+  <EntityType Name="ITENSORCAMENTOS">
+    <Key>
+      <PropertyRef Name="IOCODIGO" />
+    </Key>
+    <Property Name="IOCODIGO" Type="Int32" Nullable="false" />
+    <Property Name="ORCCODIGO" Type="Int32" />
+    <Property Name="PROCODIGO" Type="Int32" />
+    <Property Name="IOQUANTIDADE" Type="Int32" />
+    <Property Name="IOPRECOUNITARIO" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="IOTOTAL" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="IOPRECOREPOSICAO" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="IOTOTALREPOSICAO" Type="Decimal" Precision="15" Scale="2" />
+  </EntityType>
+  <EntityType Name="LOGNF">
+    <Key>
+      <PropertyRef Name="LOGNFCODG" />
+    </Key>
+    <Property Name="LOGNFCODG" Type="Int32" Nullable="false" />
+    <Property Name="LOGNFCODIGO" Type="Int32" />
+    <Property Name="LOGNFCLICODIGO" Type="Int32" />
+    <Property Name="LOGNFTIME" Type="DateTime" />
+    <Property Name="LOGNFUSUARIO" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="LOGNFOPERACAO" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="LOGPEDIDOS">
+    <Key>
+      <PropertyRef Name="LOGPCODIGOPED" />
+    </Key>
+    <Property Name="LOGPCODIGOPED" Type="Int32" Nullable="false" />
+    <Property Name="LOGPEDIDO" Type="Int32" />
+    <Property Name="LOGPDESCRICAO" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="LOGPUSUARIO" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="LOGPTIME" Type="DateTime" />
+    <Property Name="LOGPOPERACAO" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="NF">
+    <Key>
+      <PropertyRef Name="CODIGO" />
+    </Key>
+    <Property Name="CODIGO" Type="Int32" Nullable="false" />
+    <Property Name="CLIENTE" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+    <Property Name="VALOR" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="DATAEMISSAO" Type="DateTime" />
+    <Property Name="DATAIMPRESSAO" Type="DateTime" />
+    <Property Name="OBS" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="DESCRICAO" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="SITUACAO" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ULTIMOACESSO" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ULTIMOACESSODATA" Type="DateTime" />
+    <Property Name="EMITIDOPOR" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="EMITIDOPORDATA" Type="DateTime" />
+    <Property Name="OBS2" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="ULTIMOIMPRESSAO" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="NFCLICODIGO" Type="Int32" Nullable="false" />
+    <Property Name="DATAAGENDA" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="ORCAMENTOS">
+    <Key>
+      <PropertyRef Name="ORCCODIGO" />
+    </Key>
+    <Property Name="ORCCODIGO" Type="Int32" Nullable="false" />
+    <Property Name="ORCDATAEMISSAO" Type="DateTime" />
+    <Property Name="ORCDATALOCACAO" Type="DateTime" />
+    <Property Name="ORCDATASAIDA" Type="DateTime" />
+    <Property Name="ORCDATADEVOLUCAO" Type="DateTime" />
+    <Property Name="CLICODIGO" Type="Int32" Nullable="false" />
+    <Property Name="FORCODIGO" Type="Int32" />
+    <Property Name="ORCOBS" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="ORCDIARIA" Type="Single" />
+    <Property Name="ORCDESCONTO" Type="Single" />
+    <Property Name="DATAIMPRESSAO" Type="DateTime" />
+    <Property Name="ULTIMOACESSO" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ULTIMOACESSODATA" Type="DateTime" />
+    <Property Name="EMITIDOPOR" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="EMITIDOPORDATA" Type="DateTime" />
+    <Property Name="ULTIMOIMPRESSAO" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ORCDESCONTOP" Type="Single" />
+  </EntityType>
+  <EntityType Name="PRODUTOS">
+    <Key>
+      <PropertyRef Name="PROCODIGO" />
+    </Key>
+    <Property Name="PROCODIGO" Type="Int32" Nullable="false" />
+    <Property Name="GRUCODIGO" Type="Int32" />
+    <Property Name="SUBGCODIGO" Type="Int32" />
+    <Property Name="PRODESCRICAO" Type="String" Nullable="false" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="PROPRECOUNITARIO" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="PROREPOSICAO" Type="Decimal" Precision="15" Scale="2" />
+    <Property Name="PROUNIDADE" Type="String" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="PROESTOQUE" Type="Int32" />
+    <Property Name="ULTIMOACESSO" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ULTIMOACESSODATA" Type="DateTime" />
+    <Property Name="EMITIDOPOR" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="EMITIDOPORDATA" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="SUBGRUPOPRODUTOS">
+    <Key>
+      <PropertyRef Name="SUBGCODIGO" />
+    </Key>
+    <Property Name="SUBGCODIGO" Type="Int32" Nullable="false" />
+    <Property Name="SUBGDESCRICAO" Type="String" MaxLength="35" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_IMGENDERECO_1">
+    <End Type="Model.CLIENTES" Role="CLIENTES" Multiplicity="0..1" />
+    <End Type="Model.IMGENDERECO" Role="IMGENDERECO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLIENTES">
+        <PropertyRef Name="CLICODIGO" />
+      </Principal>
+      <Dependent Role="IMGENDERECO">
+        <PropertyRef Name="CLICODIGO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

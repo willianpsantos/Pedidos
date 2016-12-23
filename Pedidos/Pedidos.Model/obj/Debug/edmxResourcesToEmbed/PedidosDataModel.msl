@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="PedidosDataContext">
+    <EntitySetMapping Name="CLIENTES">
+      <EntityTypeMapping TypeName="Model.CLIENTES">
+        <MappingFragment StoreEntitySet="CLIENTES">
+          <ScalarProperty Name="CLICODIGO" ColumnName="CLICODIGO" />
+          <ScalarProperty Name="CLIRAZAOSOCIAL" ColumnName="CLIRAZAOSOCIAL" />
+          <ScalarProperty Name="CLICNPJ" ColumnName="CLICNPJ" />
+          <ScalarProperty Name="CLICPF" ColumnName="CLICPF" />
+          <ScalarProperty Name="CLITELFONE" ColumnName="CLITELFONE" />
+          <ScalarProperty Name="CLICELULAR" ColumnName="CLICELULAR" />
+          <ScalarProperty Name="CLITELEFONECOMERCIAL" ColumnName="CLITELEFONECOMERCIAL" />
+          <ScalarProperty Name="CLIENDERECO" ColumnName="CLIENDERECO" />
+          <ScalarProperty Name="CLIPONTOREFERENCIA" ColumnName="CLIPONTOREFERENCIA" />
+          <ScalarProperty Name="CLIBAIRRO" ColumnName="CLIBAIRRO" />
+          <ScalarProperty Name="CLICIDADEUF" ColumnName="CLICIDADEUF" />
+          <ScalarProperty Name="CLICONTATO" ColumnName="CLICONTATO" />
+          <ScalarProperty Name="CLIEMAIL" ColumnName="CLIEMAIL" />
+          <ScalarProperty Name="CLIDATACADASTRO" ColumnName="CLIDATACADASTRO" />
+          <ScalarProperty Name="CLICLASSIFICACAO" ColumnName="CLICLASSIFICACAO" />
+          <ScalarProperty Name="CLIOBS" ColumnName="CLIOBS" />
+          <ScalarProperty Name="CLICEP" ColumnName="CLICEP" />
+          <ScalarProperty Name="CLIRGIE" ColumnName="CLIRGIE" />
+          <ScalarProperty Name="CLIINSCRESTADUAL" ColumnName="CLIINSCRESTADUAL" />
+          <ScalarProperty Name="CLIINSCRMUNICIPAL" ColumnName="CLIINSCRMUNICIPAL" />
+          <ScalarProperty Name="ULTIMOACESSO" ColumnName="ULTIMOACESSO" />
+          <ScalarProperty Name="ULTIMOACESSODATA" ColumnName="ULTIMOACESSODATA" />
+          <ScalarProperty Name="EMITIDOPOR" ColumnName="EMITIDOPOR" />
+          <ScalarProperty Name="EMITIDOPORDATA" ColumnName="EMITIDOPORDATA" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PEDIDOS">
+      <EntityTypeMapping TypeName="Model.PEDIDOS">
+        <MappingFragment StoreEntitySet="PEDIDOS">
+          <ScalarProperty Name="PEDCODIGO" ColumnName="PEDCODIGO" />
+          <ScalarProperty Name="ORCCODIGO" ColumnName="ORCCODIGO" />
+          <ScalarProperty Name="PEDDATAEMISSAO" ColumnName="PEDDATAEMISSAO" />
+          <ScalarProperty Name="PEDDATALOCACAO" ColumnName="PEDDATALOCACAO" />
+          <ScalarProperty Name="PEDDATASAIDA" ColumnName="PEDDATASAIDA" />
+          <ScalarProperty Name="PEDDATADEVOLUCAO" ColumnName="PEDDATADEVOLUCAO" />
+          <ScalarProperty Name="CLICODIGO" ColumnName="CLICODIGO" />
+          <ScalarProperty Name="FORCODIGO" ColumnName="FORCODIGO" />
+          <ScalarProperty Name="PEDOBS" ColumnName="PEDOBS" />
+          <ScalarProperty Name="PEDDIARIA" ColumnName="PEDDIARIA" />
+          <ScalarProperty Name="PEDOBS2" ColumnName="PEDOBS2" />
+          <ScalarProperty Name="PEDTIPOENTREGA" ColumnName="PEDTIPOENTREGA" />
+          <ScalarProperty Name="PEDATENDENTE" ColumnName="PEDATENDENTE" />
+          <ScalarProperty Name="PEDVALORPAGO" ColumnName="PEDVALORPAGO" />
+          <ScalarProperty Name="PEDDESCONTO" ColumnName="PEDDESCONTO" />
+          <ScalarProperty Name="PEDSTATUS" ColumnName="PEDSTATUS" />
+          <ScalarProperty Name="PEDSTATUSPGTO" ColumnName="PEDSTATUSPGTO" />
+          <ScalarProperty Name="DATAIMPRESSAO" ColumnName="DATAIMPRESSAO" />
+          <ScalarProperty Name="ULTIMOACESSO" ColumnName="ULTIMOACESSO" />
+          <ScalarProperty Name="ULTIMOACESSODATA" ColumnName="ULTIMOACESSODATA" />
+          <ScalarProperty Name="EMITIDOPOR" ColumnName="EMITIDOPOR" />
+          <ScalarProperty Name="EMITIDOPORDATA" ColumnName="EMITIDOPORDATA" />
+          <ScalarProperty Name="ULTIMOIMPRESSAO" ColumnName="ULTIMOIMPRESSAO" />
+          <ScalarProperty Name="PEDDESCONTOP" ColumnName="PEDDESCONTOP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USUARIO">
+      <EntityTypeMapping TypeName="Model.USUARIO">
+        <MappingFragment StoreEntitySet="USUARIO">
+          <ScalarProperty Name="CODG" ColumnName="CODG" />
+          <ScalarProperty Name="LOGIN" ColumnName="LOGIN" />
+          <ScalarProperty Name="SENHA" ColumnName="SENHA" />
+          <ScalarProperty Name="PERFIL" ColumnName="PERFIL" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ITENSPEDIDOS">
+      <EntityTypeMapping TypeName="Model.ITENSPEDIDOS">
+        <MappingFragment StoreEntitySet="ITENSPEDIDOS">
+          <ScalarProperty Name="IPDATA" ColumnName="IPDATA" />
+          <ScalarProperty Name="IPLOCADO" ColumnName="IPLOCADO" />
+          <ScalarProperty Name="IPTOTALREPOSICAO" ColumnName="IPTOTALREPOSICAO" />
+          <ScalarProperty Name="IPPRECOREPOSICAO" ColumnName="IPPRECOREPOSICAO" />
+          <ScalarProperty Name="IPTOTAL" ColumnName="IPTOTAL" />
+          <ScalarProperty Name="IPPRECOUNITARIO" ColumnName="IPPRECOUNITARIO" />
+          <ScalarProperty Name="IPQUANTIDADE" ColumnName="IPQUANTIDADE" />
+          <ScalarProperty Name="PROCODIGO" ColumnName="PROCODIGO" />
+          <ScalarProperty Name="PEDCODIGO" ColumnName="PEDCODIGO" />
+          <ScalarProperty Name="IPCODIGO" ColumnName="IPCODIGO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CHEQUES">
+      <EntityTypeMapping TypeName="Model.CHEQUES">
+        <MappingFragment StoreEntitySet="CHEQUES">
+          <ScalarProperty Name="CHECNPJ" ColumnName="CHECNPJ" />
+          <ScalarProperty Name="ULTIMOACESSODATA" ColumnName="ULTIMOACESSODATA" />
+          <ScalarProperty Name="ULTIMOACESSO" ColumnName="ULTIMOACESSO" />
+          <ScalarProperty Name="CHEAGENCIA" ColumnName="CHEAGENCIA" />
+          <ScalarProperty Name="CHECONTACORRENTE" ColumnName="CHECONTACORRENTE" />
+          <ScalarProperty Name="CHENUMERO" ColumnName="CHENUMERO" />
+          <ScalarProperty Name="CHEBANCO" ColumnName="CHEBANCO" />
+          <ScalarProperty Name="CPFDOCHEQUE" ColumnName="CPFDOCHEQUE" />
+          <ScalarProperty Name="CHEDATA" ColumnName="CHEDATA" />
+          <ScalarProperty Name="CHEOBS" ColumnName="CHEOBS" />
+          <ScalarProperty Name="CHECELULAR" ColumnName="CHECELULAR" />
+          <ScalarProperty Name="CHETELEFONE" ColumnName="CHETELEFONE" />
+          <ScalarProperty Name="CHESITUACAO" ColumnName="CHESITUACAO" />
+          <ScalarProperty Name="CHEDATADEPOSITO" ColumnName="CHEDATADEPOSITO" />
+          <ScalarProperty Name="CHEVALOR" ColumnName="CHEVALOR" />
+          <ScalarProperty Name="NOMEDOCHEQUE" ColumnName="NOMEDOCHEQUE" />
+          <ScalarProperty Name="NOMECLIENTE" ColumnName="NOMECLIENTE" />
+          <ScalarProperty Name="PEDCODIGO" ColumnName="PEDCODIGO" />
+          <ScalarProperty Name="CHECODIGO" ColumnName="CHECODIGO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CONFSISTEMA">
+      <EntityTypeMapping TypeName="Model.CONFSISTEMA">
+        <MappingFragment StoreEntitySet="CONFSISTEMA">
+          <ScalarProperty Name="URLNOTA" ColumnName="URLNOTA" />
+          <ScalarProperty Name="EREMETENTE" ColumnName="EREMETENTE" />
+          <ScalarProperty Name="EPORTASMTP" ColumnName="EPORTASMTP" />
+          <ScalarProperty Name="EENDERECOSMTP" ColumnName="EENDERECOSMTP" />
+          <ScalarProperty Name="EUTILIZASSL" ColumnName="EUTILIZASSL" />
+          <ScalarProperty Name="EAUTENTICAREQUERIDA" ColumnName="EAUTENTICAREQUERIDA" />
+          <ScalarProperty Name="ESENHA" ColumnName="ESENHA" />
+          <ScalarProperty Name="EUSUARIO" ColumnName="EUSUARIO" />
+          <ScalarProperty Name="URLCNPJ" ColumnName="URLCNPJ" />
+          <ScalarProperty Name="URLCPF" ColumnName="URLCPF" />
+          <ScalarProperty Name="URLPESQUISA" ColumnName="URLPESQUISA" />
+          <ScalarProperty Name="STATUSBLOQUEIO" ColumnName="STATUSBLOQUEIO" />
+          <ScalarProperty Name="DATAEXPIRACAO" ColumnName="DATAEXPIRACAO" />
+          <ScalarProperty Name="SENHAALTERAR" ColumnName="SENHAALTERAR" />
+          <ScalarProperty Name="SENHAEXCLUSAO" ColumnName="SENHAEXCLUSAO" />
+          <ScalarProperty Name="URLPEDIDO" ColumnName="URLPEDIDO" />
+          <ScalarProperty Name="URLORC" ColumnName="URLORC" />
+          <ScalarProperty Name="URLIMPRESSORA" ColumnName="URLIMPRESSORA" />
+          <ScalarProperty Name="CODG" ColumnName="CODG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FORMAPAGAMENTO">
+      <EntityTypeMapping TypeName="Model.FORMAPAGAMENTO">
+        <MappingFragment StoreEntitySet="FORMAPAGAMENTO">
+          <ScalarProperty Name="FORDESCRICAO" ColumnName="FORDESCRICAO" />
+          <ScalarProperty Name="FORCODIGO" ColumnName="FORCODIGO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FORNECEDOR">
+      <EntityTypeMapping TypeName="Model.FORNECEDOR">
+        <MappingFragment StoreEntitySet="FORNECEDOR">
+          <ScalarProperty Name="FORCEP" ColumnName="FORCEP" />
+          <ScalarProperty Name="FOREMAIL" ColumnName="FOREMAIL" />
+          <ScalarProperty Name="FORFAX" ColumnName="FORFAX" />
+          <ScalarProperty Name="FORCELULAR" ColumnName="FORCELULAR" />
+          <ScalarProperty Name="FORTELEFONE" ColumnName="FORTELEFONE" />
+          <ScalarProperty Name="FORGRUPOPRODUTO" ColumnName="FORGRUPOPRODUTO" />
+          <ScalarProperty Name="FOROBS" ColumnName="FOROBS" />
+          <ScalarProperty Name="FORCONTATO" ColumnName="FORCONTATO" />
+          <ScalarProperty Name="FORRAMO" ColumnName="FORRAMO" />
+          <ScalarProperty Name="FORCIDADE" ColumnName="FORCIDADE" />
+          <ScalarProperty Name="FORBAIRRO" ColumnName="FORBAIRRO" />
+          <ScalarProperty Name="FORENDERECO" ColumnName="FORENDERECO" />
+          <ScalarProperty Name="FORCNPJ" ColumnName="FORCNPJ" />
+          <ScalarProperty Name="FORNOME" ColumnName="FORNOME" />
+          <ScalarProperty Name="FORCODG" ColumnName="FORCODG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FUNCIONARIOS">
+      <EntityTypeMapping TypeName="Model.FUNCIONARIOS">
+        <MappingFragment StoreEntitySet="FUNCIONARIOS">
+          <ScalarProperty Name="OBS" ColumnName="OBS" />
+          <ScalarProperty Name="VALORLIQUIDO" ColumnName="VALORLIQUIDO" />
+          <ScalarProperty Name="VALEREFEICAO" ColumnName="VALEREFEICAO" />
+          <ScalarProperty Name="VALETRANSP" ColumnName="VALETRANSP" />
+          <ScalarProperty Name="INSS" ColumnName="INSS" />
+          <ScalarProperty Name="SALARIO" ColumnName="SALARIO" />
+          <ScalarProperty Name="CIDADE" ColumnName="CIDADE" />
+          <ScalarProperty Name="BAIRRO" ColumnName="BAIRRO" />
+          <ScalarProperty Name="DATACAD" ColumnName="DATACAD" />
+          <ScalarProperty Name="EMAIL" ColumnName="EMAIL" />
+          <ScalarProperty Name="CEP" ColumnName="CEP" />
+          <ScalarProperty Name="PONTOREF" ColumnName="PONTOREF" />
+          <ScalarProperty Name="ENDERECO" ColumnName="ENDERECO" />
+          <ScalarProperty Name="CELULAR" ColumnName="CELULAR" />
+          <ScalarProperty Name="TELEFONE" ColumnName="TELEFONE" />
+          <ScalarProperty Name="RG" ColumnName="RG" />
+          <ScalarProperty Name="CPF" ColumnName="CPF" />
+          <ScalarProperty Name="FUNCIONARIO" ColumnName="FUNCIONARIO" />
+          <ScalarProperty Name="CODG" ColumnName="CODG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="GRUPOPRODUTOS">
+      <EntityTypeMapping TypeName="Model.GRUPOPRODUTOS">
+        <MappingFragment StoreEntitySet="GRUPOPRODUTOS">
+          <ScalarProperty Name="GRUDESCRICAO" ColumnName="GRUDESCRICAO" />
+          <ScalarProperty Name="GRUCODIGO" ColumnName="GRUCODIGO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IMGENDERECO">
+      <EntityTypeMapping TypeName="Model.IMGENDERECO">
+        <MappingFragment StoreEntitySet="IMGENDERECO">
+          <ScalarProperty Name="USUARIOCRIACAO" ColumnName="USUARIOCRIACAO" />
+          <ScalarProperty Name="USUARIOALTERACAO" ColumnName="USUARIOALTERACAO" />
+          <ScalarProperty Name="DATAALTERACAO" ColumnName="DATAALTERACAO" />
+          <ScalarProperty Name="DATACRIACAO" ColumnName="DATACRIACAO" />
+          <ScalarProperty Name="IMAGEM" ColumnName="IMAGEM" />
+          <ScalarProperty Name="CLICODIGO" ColumnName="CLICODIGO" />
+          <ScalarProperty Name="CODG" ColumnName="CODG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ITENSORCAMENTOS">
+      <EntityTypeMapping TypeName="Model.ITENSORCAMENTOS">
+        <MappingFragment StoreEntitySet="ITENSORCAMENTOS">
+          <ScalarProperty Name="IOTOTALREPOSICAO" ColumnName="IOTOTALREPOSICAO" />
+          <ScalarProperty Name="IOPRECOREPOSICAO" ColumnName="IOPRECOREPOSICAO" />
+          <ScalarProperty Name="IOTOTAL" ColumnName="IOTOTAL" />
+          <ScalarProperty Name="IOPRECOUNITARIO" ColumnName="IOPRECOUNITARIO" />
+          <ScalarProperty Name="IOQUANTIDADE" ColumnName="IOQUANTIDADE" />
+          <ScalarProperty Name="PROCODIGO" ColumnName="PROCODIGO" />
+          <ScalarProperty Name="ORCCODIGO" ColumnName="ORCCODIGO" />
+          <ScalarProperty Name="IOCODIGO" ColumnName="IOCODIGO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOGNF">
+      <EntityTypeMapping TypeName="Model.LOGNF">
+        <MappingFragment StoreEntitySet="LOGNF">
+          <ScalarProperty Name="LOGNFOPERACAO" ColumnName="LOGNFOPERACAO" />
+          <ScalarProperty Name="LOGNFUSUARIO" ColumnName="LOGNFUSUARIO" />
+          <ScalarProperty Name="LOGNFTIME" ColumnName="LOGNFTIME" />
+          <ScalarProperty Name="LOGNFCLICODIGO" ColumnName="LOGNFCLICODIGO" />
+          <ScalarProperty Name="LOGNFCODIGO" ColumnName="LOGNFCODIGO" />
+          <ScalarProperty Name="LOGNFCODG" ColumnName="LOGNFCODG" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="LOGPEDIDOS">
+      <EntityTypeMapping TypeName="Model.LOGPEDIDOS">
+        <MappingFragment StoreEntitySet="LOGPEDIDOS">
+          <ScalarProperty Name="LOGPOPERACAO" ColumnName="LOGPOPERACAO" />
+          <ScalarProperty Name="LOGPTIME" ColumnName="LOGPTIME" />
+          <ScalarProperty Name="LOGPUSUARIO" ColumnName="LOGPUSUARIO" />
+          <ScalarProperty Name="LOGPDESCRICAO" ColumnName="LOGPDESCRICAO" />
+          <ScalarProperty Name="LOGPEDIDO" ColumnName="LOGPEDIDO" />
+          <ScalarProperty Name="LOGPCODIGOPED" ColumnName="LOGPCODIGOPED" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="NF">
+      <EntityTypeMapping TypeName="Model.NF">
+        <MappingFragment StoreEntitySet="NF">
+          <ScalarProperty Name="DATAAGENDA" ColumnName="DATAAGENDA" />
+          <ScalarProperty Name="NFCLICODIGO" ColumnName="NFCLICODIGO" />
+          <ScalarProperty Name="ULTIMOIMPRESSAO" ColumnName="ULTIMOIMPRESSAO" />
+          <ScalarProperty Name="OBS2" ColumnName="OBS2" />
+          <ScalarProperty Name="EMITIDOPORDATA" ColumnName="EMITIDOPORDATA" />
+          <ScalarProperty Name="EMITIDOPOR" ColumnName="EMITIDOPOR" />
+          <ScalarProperty Name="ULTIMOACESSODATA" ColumnName="ULTIMOACESSODATA" />
+          <ScalarProperty Name="ULTIMOACESSO" ColumnName="ULTIMOACESSO" />
+          <ScalarProperty Name="SITUACAO" ColumnName="SITUACAO" />
+          <ScalarProperty Name="DESCRICAO" ColumnName="DESCRICAO" />
+          <ScalarProperty Name="OBS" ColumnName="OBS" />
+          <ScalarProperty Name="DATAIMPRESSAO" ColumnName="DATAIMPRESSAO" />
+          <ScalarProperty Name="DATAEMISSAO" ColumnName="DATAEMISSAO" />
+          <ScalarProperty Name="VALOR" ColumnName="VALOR" />
+          <ScalarProperty Name="CLIENTE" ColumnName="CLIENTE" />
+          <ScalarProperty Name="CODIGO" ColumnName="CODIGO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ORCAMENTOS">
+      <EntityTypeMapping TypeName="Model.ORCAMENTOS">
+        <MappingFragment StoreEntitySet="ORCAMENTOS">
+          <ScalarProperty Name="ORCDESCONTOP" ColumnName="ORCDESCONTOP" />
+          <ScalarProperty Name="ULTIMOIMPRESSAO" ColumnName="ULTIMOIMPRESSAO" />
+          <ScalarProperty Name="EMITIDOPORDATA" ColumnName="EMITIDOPORDATA" />
+          <ScalarProperty Name="EMITIDOPOR" ColumnName="EMITIDOPOR" />
+          <ScalarProperty Name="ULTIMOACESSODATA" ColumnName="ULTIMOACESSODATA" />
+          <ScalarProperty Name="ULTIMOACESSO" ColumnName="ULTIMOACESSO" />
+          <ScalarProperty Name="DATAIMPRESSAO" ColumnName="DATAIMPRESSAO" />
+          <ScalarProperty Name="ORCDESCONTO" ColumnName="ORCDESCONTO" />
+          <ScalarProperty Name="ORCDIARIA" ColumnName="ORCDIARIA" />
+          <ScalarProperty Name="ORCOBS" ColumnName="ORCOBS" />
+          <ScalarProperty Name="FORCODIGO" ColumnName="FORCODIGO" />
+          <ScalarProperty Name="CLICODIGO" ColumnName="CLICODIGO" />
+          <ScalarProperty Name="ORCDATADEVOLUCAO" ColumnName="ORCDATADEVOLUCAO" />
+          <ScalarProperty Name="ORCDATASAIDA" ColumnName="ORCDATASAIDA" />
+          <ScalarProperty Name="ORCDATALOCACAO" ColumnName="ORCDATALOCACAO" />
+          <ScalarProperty Name="ORCDATAEMISSAO" ColumnName="ORCDATAEMISSAO" />
+          <ScalarProperty Name="ORCCODIGO" ColumnName="ORCCODIGO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PRODUTOS">
+      <EntityTypeMapping TypeName="Model.PRODUTOS">
+        <MappingFragment StoreEntitySet="PRODUTOS">
+          <ScalarProperty Name="EMITIDOPORDATA" ColumnName="EMITIDOPORDATA" />
+          <ScalarProperty Name="EMITIDOPOR" ColumnName="EMITIDOPOR" />
+          <ScalarProperty Name="ULTIMOACESSODATA" ColumnName="ULTIMOACESSODATA" />
+          <ScalarProperty Name="ULTIMOACESSO" ColumnName="ULTIMOACESSO" />
+          <ScalarProperty Name="PROESTOQUE" ColumnName="PROESTOQUE" />
+          <ScalarProperty Name="PROUNIDADE" ColumnName="PROUNIDADE" />
+          <ScalarProperty Name="PROREPOSICAO" ColumnName="PROREPOSICAO" />
+          <ScalarProperty Name="PROPRECOUNITARIO" ColumnName="PROPRECOUNITARIO" />
+          <ScalarProperty Name="PRODESCRICAO" ColumnName="PRODESCRICAO" />
+          <ScalarProperty Name="SUBGCODIGO" ColumnName="SUBGCODIGO" />
+          <ScalarProperty Name="GRUCODIGO" ColumnName="GRUCODIGO" />
+          <ScalarProperty Name="PROCODIGO" ColumnName="PROCODIGO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SUBGRUPOPRODUTOS">
+      <EntityTypeMapping TypeName="Model.SUBGRUPOPRODUTOS">
+        <MappingFragment StoreEntitySet="SUBGRUPOPRODUTOS">
+          <ScalarProperty Name="SUBGDESCRICAO" ColumnName="SUBGDESCRICAO" />
+          <ScalarProperty Name="SUBGCODIGO" ColumnName="SUBGCODIGO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

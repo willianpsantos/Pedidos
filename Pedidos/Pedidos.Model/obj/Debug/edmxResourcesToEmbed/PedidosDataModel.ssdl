@@ -1,0 +1,341 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Model.Store" Provider="FirebirdSql.Data.FirebirdClient" ProviderManifestToken="2.5" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CHEQUES">
+    <Key>
+      <PropertyRef Name="CHECODIGO" />
+    </Key>
+    <Property Name="CHECODIGO" Type="int" Nullable="false" />
+    <Property Name="PEDCODIGO" Type="int" />
+    <Property Name="NOMECLIENTE" Type="varchar" MaxLength="40" Unicode="true" />
+    <Property Name="NOMEDOCHEQUE" Type="varchar" MaxLength="50" Unicode="true" />
+    <Property Name="CHEVALOR" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="CHEDATADEPOSITO" Type="date" />
+    <Property Name="CHESITUACAO" Type="varchar" MaxLength="15" Unicode="true" />
+    <Property Name="CHETELEFONE" Type="varchar" MaxLength="20" Unicode="true" />
+    <Property Name="CHECELULAR" Type="varchar" MaxLength="20" Unicode="true" />
+    <Property Name="CHEOBS" Type="clob" Unicode="true" />
+    <Property Name="CHEDATA" Type="date" />
+    <Property Name="CPFDOCHEQUE" Type="varchar" MaxLength="30" Unicode="true" />
+    <Property Name="CHEBANCO" Type="varchar" MaxLength="15" Unicode="true" />
+    <Property Name="CHENUMERO" Type="varchar" MaxLength="15" Unicode="true" />
+    <Property Name="CHECONTACORRENTE" Type="varchar" MaxLength="15" Unicode="true" />
+    <Property Name="CHEAGENCIA" Type="varchar" MaxLength="15" Unicode="true" />
+    <Property Name="ULTIMOACESSO" Type="varchar" MaxLength="20" Unicode="true" />
+    <Property Name="ULTIMOACESSODATA" Type="date" />
+    <Property Name="CHECNPJ" Type="varchar" MaxLength="30" Unicode="true" />
+  </EntityType>
+  <EntityType Name="CLIENTES">
+    <Key>
+      <PropertyRef Name="CLICODIGO" />
+    </Key>
+    <Property Name="CLICODIGO" Type="int" Nullable="false" />
+    <Property Name="CLIRAZAOSOCIAL" Type="varchar" MaxLength="80" Unicode="true" Nullable="false" />
+    <Property Name="CLICNPJ" Type="varchar" MaxLength="19" Unicode="true" />
+    <Property Name="CLICPF" Type="varchar" MaxLength="14" Unicode="true" />
+    <Property Name="CLITELFONE" Type="varchar" MaxLength="14" Unicode="true" />
+    <Property Name="CLICELULAR" Type="varchar" MaxLength="14" Unicode="true" />
+    <Property Name="CLITELEFONECOMERCIAL" Type="varchar" MaxLength="14" Unicode="true" />
+    <Property Name="CLIENDERECO" Type="varchar" MaxLength="100" Unicode="true" />
+    <Property Name="CLIPONTOREFERENCIA" Type="varchar" MaxLength="100" Unicode="true" />
+    <Property Name="CLIBAIRRO" Type="varchar" MaxLength="40" Unicode="true" />
+    <Property Name="CLICIDADEUF" Type="varchar" MaxLength="35" Unicode="true" />
+    <Property Name="CLICONTATO" Type="varchar" MaxLength="40" Unicode="true" />
+    <Property Name="CLIEMAIL" Type="varchar" MaxLength="50" Unicode="true" />
+    <Property Name="CLIDATACADASTRO" Type="date" />
+    <Property Name="CLICLASSIFICACAO" Type="char" MaxLength="1" Unicode="false" />
+    <Property Name="CLIOBS" Type="blob" />
+    <Property Name="CLICEP" Type="varchar" MaxLength="10" Unicode="true" />
+    <Property Name="CLIRGIE" Type="varchar" MaxLength="20" Unicode="true" />
+    <Property Name="CLIINSCRESTADUAL" Type="varchar" MaxLength="30" Unicode="true" />
+    <Property Name="CLIINSCRMUNICIPAL" Type="varchar" MaxLength="30" Unicode="true" />
+    <Property Name="ULTIMOACESSO" Type="varchar" MaxLength="20" Unicode="true" />
+    <Property Name="ULTIMOACESSODATA" Type="date" />
+    <Property Name="EMITIDOPOR" Type="varchar" MaxLength="20" Unicode="true" />
+    <Property Name="EMITIDOPORDATA" Type="date" />
+  </EntityType>
+  <EntityType Name="CONFSISTEMA">
+    <Key>
+      <PropertyRef Name="CODG" />
+    </Key>
+    <Property Name="CODG" Type="int" Nullable="false" />
+    <Property Name="URLIMPRESSORA" Type="varchar" MaxLength="40" Unicode="true" />
+    <Property Name="URLORC" Type="varchar" MaxLength="40" Unicode="true" />
+    <Property Name="URLPEDIDO" Type="varchar" MaxLength="40" Unicode="true" />
+    <Property Name="SENHAEXCLUSAO" Type="varchar" MaxLength="20" Unicode="true" />
+    <Property Name="SENHAALTERAR" Type="varchar" MaxLength="20" Unicode="true" />
+    <Property Name="DATAEXPIRACAO" Type="date" />
+    <Property Name="STATUSBLOQUEIO" Type="int" />
+    <Property Name="URLPESQUISA" Type="varchar" MaxLength="100" Unicode="true" />
+    <Property Name="URLCPF" Type="varchar" MaxLength="100" Unicode="true" />
+    <Property Name="URLCNPJ" Type="varchar" MaxLength="100" Unicode="true" />
+    <Property Name="EUSUARIO" Type="varchar" MaxLength="30" Unicode="true" />
+    <Property Name="ESENHA" Type="varchar" MaxLength="30" Unicode="true" />
+    <Property Name="EAUTENTICAREQUERIDA" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="EUTILIZASSL" Type="varchar" MaxLength="1" Unicode="true" />
+    <Property Name="EENDERECOSMTP" Type="varchar" MaxLength="50" Unicode="true" />
+    <Property Name="EPORTASMTP" Type="varchar" MaxLength="10" Unicode="true" />
+    <Property Name="EREMETENTE" Type="varchar" MaxLength="50" Unicode="true" />
+    <Property Name="URLNOTA" Type="varchar" MaxLength="40" Unicode="true" />
+  </EntityType>
+  <EntityType Name="FORMAPAGAMENTO">
+    <Key>
+      <PropertyRef Name="FORCODIGO" />
+    </Key>
+    <Property Name="FORCODIGO" Type="int" Nullable="false" />
+    <Property Name="FORDESCRICAO" Type="varchar" MaxLength="30" Unicode="true" />
+  </EntityType>
+  <EntityType Name="FORNECEDOR">
+    <Key>
+      <PropertyRef Name="FORCODG" />
+    </Key>
+    <Property Name="FORCODG" Type="int" Nullable="false" />
+    <Property Name="FORNOME" Type="varchar" MaxLength="60" Unicode="true" />
+    <Property Name="FORCNPJ" Type="varchar" MaxLength="20" Unicode="true" />
+    <Property Name="FORENDERECO" Type="varchar" MaxLength="60" Unicode="true" />
+    <Property Name="FORBAIRRO" Type="varchar" MaxLength="30" Unicode="true" />
+    <Property Name="FORCIDADE" Type="varchar" MaxLength="20" Unicode="true" />
+    <Property Name="FORRAMO" Type="varchar" MaxLength="60" Unicode="true" />
+    <Property Name="FORCONTATO" Type="varchar" MaxLength="30" Unicode="true" />
+    <Property Name="FOROBS" Type="clob" Unicode="true" />
+    <Property Name="FORGRUPOPRODUTO" Type="varchar" MaxLength="20" Unicode="true" />
+    <Property Name="FORTELEFONE" Type="varchar" MaxLength="15" Unicode="true" />
+    <Property Name="FORCELULAR" Type="varchar" MaxLength="15" Unicode="true" />
+    <Property Name="FORFAX" Type="varchar" MaxLength="15" Unicode="true" />
+    <Property Name="FOREMAIL" Type="varchar" MaxLength="50" Unicode="true" />
+    <Property Name="FORCEP" Type="varchar" MaxLength="15" Unicode="true" />
+  </EntityType>
+  <EntityType Name="FUNCIONARIOS">
+    <Key>
+      <PropertyRef Name="CODG" />
+    </Key>
+    <Property Name="CODG" Type="int" Nullable="false" />
+    <Property Name="FUNCIONARIO" Type="varchar" MaxLength="50" Unicode="true" />
+    <Property Name="CPF" Type="varchar" MaxLength="15" Unicode="true" />
+    <Property Name="RG" Type="varchar" MaxLength="15" Unicode="true" />
+    <Property Name="TELEFONE" Type="varchar" MaxLength="15" Unicode="true" />
+    <Property Name="CELULAR" Type="varchar" MaxLength="15" Unicode="true" />
+    <Property Name="ENDERECO" Type="varchar" MaxLength="50" Unicode="true" />
+    <Property Name="PONTOREF" Type="varchar" MaxLength="50" Unicode="true" />
+    <Property Name="CEP" Type="varchar" MaxLength="15" Unicode="true" />
+    <Property Name="EMAIL" Type="varchar" MaxLength="50" Unicode="true" />
+    <Property Name="DATACAD" Type="date" />
+    <Property Name="BAIRRO" Type="varchar" MaxLength="20" Unicode="true" />
+    <Property Name="CIDADE" Type="varchar" MaxLength="20" Unicode="true" />
+    <Property Name="SALARIO" Type="numeric" Precision="15" Scale="2" />
+    <Property Name="INSS" Type="numeric" Precision="15" Scale="2" />
+    <Property Name="VALETRANSP" Type="numeric" Precision="15" Scale="2" />
+    <Property Name="VALEREFEICAO" Type="numeric" Precision="15" Scale="2" />
+    <Property Name="VALORLIQUIDO" Type="numeric" Precision="15" Scale="2" />
+    <Property Name="OBS" Type="clob" Unicode="true" />
+  </EntityType>
+  <EntityType Name="GRUPOPRODUTOS">
+    <Key>
+      <PropertyRef Name="GRUCODIGO" />
+    </Key>
+    <Property Name="GRUCODIGO" Type="int" Nullable="false" />
+    <Property Name="GRUDESCRICAO" Type="varchar" MaxLength="30" Unicode="true" />
+  </EntityType>
+  <EntityType Name="IMGENDERECO">
+    <Key>
+      <PropertyRef Name="CODG" />
+    </Key>
+    <Property Name="CODG" Type="int" Nullable="false" />
+    <Property Name="CLICODIGO" Type="int" />
+    <Property Name="IMAGEM" Type="blob" />
+    <Property Name="DATACRIACAO" Type="date" />
+    <Property Name="DATAALTERACAO" Type="date" />
+    <Property Name="USUARIOALTERACAO" Type="varchar" MaxLength="30" Unicode="true" />
+    <Property Name="USUARIOCRIACAO" Type="varchar" MaxLength="30" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ITENSORCAMENTOS">
+    <Key>
+      <PropertyRef Name="IOCODIGO" />
+    </Key>
+    <Property Name="IOCODIGO" Type="int" Nullable="false" />
+    <Property Name="ORCCODIGO" Type="int" />
+    <Property Name="PROCODIGO" Type="int" />
+    <Property Name="IOQUANTIDADE" Type="int" />
+    <Property Name="IOPRECOUNITARIO" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="IOTOTAL" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="IOPRECOREPOSICAO" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="IOTOTALREPOSICAO" Type="decimal" Precision="15" Scale="2" />
+  </EntityType>
+  <EntityType Name="ITENSPEDIDOS">
+    <Key>
+      <PropertyRef Name="IPCODIGO" />
+    </Key>
+    <Property Name="IPCODIGO" Type="int" Nullable="false" />
+    <Property Name="PEDCODIGO" Type="int" />
+    <Property Name="PROCODIGO" Type="int" />
+    <Property Name="IPQUANTIDADE" Type="int" />
+    <Property Name="IPPRECOUNITARIO" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="IPTOTAL" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="IPPRECOREPOSICAO" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="IPTOTALREPOSICAO" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="IPLOCADO" Type="varchar" MaxLength="5" Unicode="true" />
+    <Property Name="IPDATA" Type="date" />
+  </EntityType>
+  <EntityType Name="LOGNF">
+    <Key>
+      <PropertyRef Name="LOGNFCODG" />
+    </Key>
+    <Property Name="LOGNFCODG" Type="int" Nullable="false" />
+    <Property Name="LOGNFCODIGO" Type="int" />
+    <Property Name="LOGNFCLICODIGO" Type="int" />
+    <Property Name="LOGNFTIME" Type="timestamp" />
+    <Property Name="LOGNFUSUARIO" Type="varchar" MaxLength="20" Unicode="true" />
+    <Property Name="LOGNFOPERACAO" Type="varchar" MaxLength="1" Unicode="true" />
+  </EntityType>
+  <EntityType Name="LOGPEDIDOS">
+    <Key>
+      <PropertyRef Name="LOGPCODIGOPED" />
+    </Key>
+    <Property Name="LOGPCODIGOPED" Type="int" Nullable="false" />
+    <Property Name="LOGPEDIDO" Type="int" />
+    <Property Name="LOGPDESCRICAO" Type="varchar" MaxLength="20" Unicode="true" />
+    <Property Name="LOGPUSUARIO" Type="varchar" MaxLength="20" Unicode="true" />
+    <Property Name="LOGPTIME" Type="timestamp" />
+    <Property Name="LOGPOPERACAO" Type="varchar" MaxLength="1" Unicode="true" />
+  </EntityType>
+  <EntityType Name="NF">
+    <Key>
+      <PropertyRef Name="CODIGO" />
+    </Key>
+    <Property Name="CODIGO" Type="int" Nullable="false" />
+    <Property Name="CLIENTE" Type="varchar" MaxLength="80" Unicode="true" />
+    <Property Name="VALOR" Type="numeric" Precision="10" Scale="2" />
+    <Property Name="DATAEMISSAO" Type="date" />
+    <Property Name="DATAIMPRESSAO" Type="date" />
+    <Property Name="OBS" Type="clob" Unicode="true" />
+    <Property Name="DESCRICAO" Type="clob" Unicode="true" />
+    <Property Name="SITUACAO" Type="varchar" MaxLength="20" Unicode="true" />
+    <Property Name="ULTIMOACESSO" Type="varchar" MaxLength="20" Unicode="true" />
+    <Property Name="ULTIMOACESSODATA" Type="date" />
+    <Property Name="EMITIDOPOR" Type="varchar" MaxLength="20" Unicode="true" />
+    <Property Name="EMITIDOPORDATA" Type="date" />
+    <Property Name="OBS2" Type="clob" Unicode="true" />
+    <Property Name="ULTIMOIMPRESSAO" Type="varchar" MaxLength="20" Unicode="true" />
+    <Property Name="NFCLICODIGO" Type="int" Nullable="false" />
+    <Property Name="DATAAGENDA" Type="date" />
+  </EntityType>
+  <EntityType Name="ORCAMENTOS">
+    <Key>
+      <PropertyRef Name="ORCCODIGO" />
+    </Key>
+    <Property Name="ORCCODIGO" Type="int" Nullable="false" />
+    <Property Name="ORCDATAEMISSAO" Type="date" />
+    <Property Name="ORCDATALOCACAO" Type="date" />
+    <Property Name="ORCDATASAIDA" Type="date" />
+    <Property Name="ORCDATADEVOLUCAO" Type="date" />
+    <Property Name="CLICODIGO" Type="int" Nullable="false" />
+    <Property Name="FORCODIGO" Type="int" />
+    <Property Name="ORCOBS" Type="blob" />
+    <Property Name="ORCDIARIA" Type="float" />
+    <Property Name="ORCDESCONTO" Type="float" />
+    <Property Name="DATAIMPRESSAO" Type="date" />
+    <Property Name="ULTIMOACESSO" Type="varchar" MaxLength="20" Unicode="true" />
+    <Property Name="ULTIMOACESSODATA" Type="date" />
+    <Property Name="EMITIDOPOR" Type="varchar" MaxLength="20" Unicode="true" />
+    <Property Name="EMITIDOPORDATA" Type="date" />
+    <Property Name="ULTIMOIMPRESSAO" Type="varchar" MaxLength="20" Unicode="true" />
+    <Property Name="ORCDESCONTOP" Type="float" />
+  </EntityType>
+  <EntityType Name="PEDIDOS">
+    <Key>
+      <PropertyRef Name="PEDCODIGO" />
+    </Key>
+    <Property Name="PEDCODIGO" Type="int" Nullable="false" />
+    <Property Name="ORCCODIGO" Type="int" />
+    <Property Name="PEDDATAEMISSAO" Type="date" />
+    <Property Name="PEDDATALOCACAO" Type="date" />
+    <Property Name="PEDDATASAIDA" Type="date" />
+    <Property Name="PEDDATADEVOLUCAO" Type="date" />
+    <Property Name="CLICODIGO" Type="int" Nullable="false" />
+    <Property Name="FORCODIGO" Type="int" />
+    <Property Name="PEDOBS" Type="blob" />
+    <Property Name="PEDDIARIA" Type="decimal" Precision="4" Scale="1" />
+    <Property Name="PEDOBS2" Type="blob" />
+    <Property Name="PEDTIPOENTREGA" Type="varchar" MaxLength="15" Unicode="true" />
+    <Property Name="PEDATENDENTE" Type="varchar" MaxLength="20" Unicode="true" />
+    <Property Name="PEDVALORPAGO" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="PEDDESCONTO" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="PEDSTATUS" Type="int" />
+    <Property Name="PEDSTATUSPGTO" Type="varchar" MaxLength="15" Unicode="true" />
+    <Property Name="DATAIMPRESSAO" Type="date" />
+    <Property Name="ULTIMOACESSO" Type="varchar" MaxLength="20" Unicode="true" />
+    <Property Name="ULTIMOACESSODATA" Type="date" />
+    <Property Name="EMITIDOPOR" Type="varchar" MaxLength="20" Unicode="true" />
+    <Property Name="EMITIDOPORDATA" Type="date" />
+    <Property Name="ULTIMOIMPRESSAO" Type="varchar" MaxLength="20" Unicode="true" />
+    <Property Name="PEDDESCONTOP" Type="numeric" Precision="15" Scale="2" />
+  </EntityType>
+  <EntityType Name="PRODUTOS">
+    <Key>
+      <PropertyRef Name="PROCODIGO" />
+    </Key>
+    <Property Name="PROCODIGO" Type="int" Nullable="false" />
+    <Property Name="GRUCODIGO" Type="int" />
+    <Property Name="SUBGCODIGO" Type="int" />
+    <Property Name="PRODESCRICAO" Type="varchar" MaxLength="40" Unicode="true" Nullable="false" />
+    <Property Name="PROPRECOUNITARIO" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="PROREPOSICAO" Type="decimal" Precision="15" Scale="2" />
+    <Property Name="PROUNIDADE" Type="varchar" MaxLength="5" Unicode="true" />
+    <Property Name="PROESTOQUE" Type="int" />
+    <Property Name="ULTIMOACESSO" Type="varchar" MaxLength="20" Unicode="true" />
+    <Property Name="ULTIMOACESSODATA" Type="date" />
+    <Property Name="EMITIDOPOR" Type="varchar" MaxLength="20" Unicode="true" />
+    <Property Name="EMITIDOPORDATA" Type="date" />
+  </EntityType>
+  <EntityType Name="SUBGRUPOPRODUTOS">
+    <Key>
+      <PropertyRef Name="SUBGCODIGO" />
+    </Key>
+    <Property Name="SUBGCODIGO" Type="int" Nullable="false" />
+    <Property Name="SUBGDESCRICAO" Type="varchar" MaxLength="35" Unicode="true" />
+  </EntityType>
+  <EntityType Name="USUARIO">
+    <Key>
+      <PropertyRef Name="CODG" />
+    </Key>
+    <Property Name="CODG" Type="int" Nullable="false" />
+    <Property Name="LOGIN" Type="varchar" MaxLength="20" Unicode="true" Nullable="false" />
+    <Property Name="SENHA" Type="varchar" MaxLength="20" Unicode="true" />
+    <Property Name="PERFIL" Type="varchar" MaxLength="30" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_IMGENDERECO_1">
+    <End Role="CLIENTES" Type="Self.CLIENTES" Multiplicity="0..1" />
+    <End Role="IMGENDERECO" Type="Self.IMGENDERECO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLIENTES">
+        <PropertyRef Name="CLICODIGO" />
+      </Principal>
+      <Dependent Role="IMGENDERECO">
+        <PropertyRef Name="CLICODIGO" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="ModelStoreContainer">
+    <EntitySet Name="CHEQUES" EntityType="Self.CHEQUES" Schema="Firebird" store:Type="Tables" />
+    <EntitySet Name="CLIENTES" EntityType="Self.CLIENTES" Schema="Firebird" store:Type="Tables" />
+    <EntitySet Name="CONFSISTEMA" EntityType="Self.CONFSISTEMA" Schema="Firebird" store:Type="Tables" />
+    <EntitySet Name="FORMAPAGAMENTO" EntityType="Self.FORMAPAGAMENTO" Schema="Firebird" store:Type="Tables" />
+    <EntitySet Name="FORNECEDOR" EntityType="Self.FORNECEDOR" Schema="Firebird" store:Type="Tables" />
+    <EntitySet Name="FUNCIONARIOS" EntityType="Self.FUNCIONARIOS" Schema="Firebird" store:Type="Tables" />
+    <EntitySet Name="GRUPOPRODUTOS" EntityType="Self.GRUPOPRODUTOS" Schema="Firebird" store:Type="Tables" />
+    <EntitySet Name="IMGENDERECO" EntityType="Self.IMGENDERECO" Schema="Firebird" store:Type="Tables" />
+    <EntitySet Name="ITENSORCAMENTOS" EntityType="Self.ITENSORCAMENTOS" Schema="Firebird" store:Type="Tables" />
+    <EntitySet Name="ITENSPEDIDOS" EntityType="Self.ITENSPEDIDOS" Schema="Firebird" store:Type="Tables" />
+    <EntitySet Name="LOGNF" EntityType="Self.LOGNF" Schema="Firebird" store:Type="Tables" />
+    <EntitySet Name="LOGPEDIDOS" EntityType="Self.LOGPEDIDOS" Schema="Firebird" store:Type="Tables" />
+    <EntitySet Name="NF" EntityType="Self.NF" Schema="Firebird" store:Type="Tables" />
+    <EntitySet Name="ORCAMENTOS" EntityType="Self.ORCAMENTOS" Schema="Firebird" store:Type="Tables" />
+    <EntitySet Name="PEDIDOS" EntityType="Self.PEDIDOS" Schema="Firebird" store:Type="Tables" />
+    <EntitySet Name="PRODUTOS" EntityType="Self.PRODUTOS" Schema="Firebird" store:Type="Tables" />
+    <EntitySet Name="SUBGRUPOPRODUTOS" EntityType="Self.SUBGRUPOPRODUTOS" Schema="Firebird" store:Type="Tables" />
+    <EntitySet Name="USUARIO" EntityType="Self.USUARIO" Schema="Firebird" store:Type="Tables" />
+    <AssociationSet Name="FK_IMGENDERECO_1" Association="Self.FK_IMGENDERECO_1">
+      <End Role="CLIENTES" EntitySet="CLIENTES" />
+      <End Role="IMGENDERECO" EntitySet="IMGENDERECO" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

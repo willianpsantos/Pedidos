@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="f6d8583657694b54b4d8b2048ad41e8d" Name="Diagram1" ZoomLevel="95">
+        <EntityTypeShape EntityType="Model.CLIENTES" Width="2.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.PEDIDOS" Width="2.375" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.USUARIO" Width="2.25" PointX="6.625" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="Model.ITENSPEDIDOS" Width="2.125" PointX="0.75" PointY="7.75" />
+        <EntityTypeShape EntityType="Model.CHEQUES" Width="1.5" PointX="7.75" PointY="3.75" />
+        <EntityTypeShape EntityType="Model.CONFSISTEMA" Width="1.5" PointX="9.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Model.FORMAPAGAMENTO" Width="1.5" PointX="9.75" PointY="6.75" />
+        <EntityTypeShape EntityType="Model.FORNECEDOR" Width="1.5" PointX="6.75" PointY="9.75" />
+        <EntityTypeShape EntityType="Model.FUNCIONARIOS" Width="1.5" PointX="8.75" PointY="9.75" />
+        <EntityTypeShape EntityType="Model.GRUPOPRODUTOS" Width="1.5" PointX="3.75" PointY="10.75" />
+        <EntityTypeShape EntityType="Model.IMGENDERECO" Width="1.5" PointX="4.375" PointY="7.375" />
+        <EntityTypeShape EntityType="Model.ITENSORCAMENTOS" Width="1.5" PointX="10.75" PointY="9.75" />
+        <EntityTypeShape EntityType="Model.LOGNF" Width="1.5" PointX="11.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Model.LOGPEDIDOS" Width="1.5" PointX="0.75" PointY="11.75" />
+        <EntityTypeShape EntityType="Model.NF" Width="1.5" PointX="11.75" PointY="3.75" />
+        <EntityTypeShape EntityType="Model.ORCAMENTOS" Width="1.5" PointX="12.75" PointY="8.75" />
+        <EntityTypeShape EntityType="Model.PRODUTOS" Width="1.875" PointX="13.75" PointY="0.75" />
+        <EntityTypeShape EntityType="Model.SUBGRUPOPRODUTOS" Width="1.5" PointX="2.75" PointY="13.75" />
+        <AssociationConnector Association="Model.FK_IMGENDERECO_1" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
